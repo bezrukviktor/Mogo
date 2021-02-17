@@ -1,0 +1,70 @@
+@import "../../styles/fonts/fonts";
+@import "../../styles/colors/colors";
+
+.statistic {
+  background-color: $statBG;
+  &-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 270px;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    &:last-child {
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+  &__number {
+    margin-bottom: 30px;
+    font-size: 72px;
+    text-transform: uppercase;
+    color: $light;
+    @include Bold;
+  }
+  &__text {
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $light;
+  }
+}
+
+@media (max-width: 992px) {
+  .statistic {
+    &-block {
+      height: 200px;
+    }
+    &__number {
+      margin-bottom: 20px;
+      font-size: 60px;
+    }
+    &__text {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .statistic {
+    &-block {
+      height: auto;
+      flex-wrap: wrap;
+    }
+    &-item {
+      border-left: none;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

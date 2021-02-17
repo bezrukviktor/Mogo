@@ -1,0 +1,102 @@
+@import "../../styles/fonts/fonts";
+@import "../../styles/colors/colors";
+
+.services {
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-block {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #e5e5e5;
+    }
+  }
+  &-item {
+    flex-basis: 25%;
+    padding: 50px 0 50px 50px;
+  }
+  &__title {
+    position: relative;
+    margin-bottom: 20px;
+    color: $titleColor;
+    font-size: 14px;
+    text-transform: uppercase;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -50px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__text {
+    font-size: 15px;
+    color: $sectionText;
+    line-height: 24px;
+  }
+}
+
+.photography::before {
+  background: url("../../assets/icons/alarm.svg") no-repeat;
+  background-size: contain;
+}
+
+.web-design::before {
+  background: url("../../assets/icons/line_graph.svg") no-repeat;
+  background-size: contain;
+}
+
+.creativity::before {
+  background: url("../../assets/icons/computer.svg") no-repeat;
+  background-size: contain;
+}
+
+.seo::before {
+  background: url("../../assets/icons/book.svg") no-repeat;
+  background-size: contain;
+}
+
+.css-html::before {
+  background: url("../../assets/icons/home.svg") no-repeat;
+  background-size: contain;
+}
+
+.digital::before {
+  background: url("../../assets/icons/image.svg") no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 992px) {
+  .services {
+    &-item {
+      flex-basis: 40%;
+      padding: 20px 0 20px 50px;
+    }
+    &-block {
+      &::after {
+        height: 0;
+        width: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    &-item {
+      flex-basis: 100%;
+    }
+  }
+}

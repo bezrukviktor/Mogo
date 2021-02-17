@@ -1,0 +1,42 @@
+@import './styles/fonts/fonts';
+@import 'normalize.css';
+
+body {
+  @include Reg;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 90px 0 110px;
+}
+
+@media screen and (max-width: 1366px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .section {
+    padding: 70px 0 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
